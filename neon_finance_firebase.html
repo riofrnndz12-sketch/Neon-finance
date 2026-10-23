@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090914">
+<title>NEON FINANCE</title>
+<style>
+:root{--bg:#080811;--panel:#111122;--panel2:#17172b;--text:#f5f4ff;--muted:#a4a3c0;--purple:#a855f7;--cyan:#39e7ff;--green:#52f5ad;--red:#ff5d8f;--border:#292943}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#17102e 0,#080811 55%);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:12px 15px;font-weight:700;color:#090914;background:linear-gradient(100deg,var(--purple),var(--cyan))}button.secondary{background:#24243c;color:var(--text);border:1px solid var(--border)}button.danger{background:#3b1729;color:#ff9dbb;border:1px solid #65243d}button:disabled{opacity:.5;cursor:not-allowed}.wrap{max-width:1050px;margin:auto;padding:20px 14px 42px}.brand{display:flex;align-items:center;gap:12px;margin:6px 0 22px}.logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(140deg,var(--purple),var(--cyan));color:#090914;font-weight:1000;font-size:20px;box-shadow:0 0 24px #a855f744}.brand h1{font-size:21px;letter-spacing:2px;margin:0}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:2px;margin-top:2px}.card{background:linear-gradient(145deg,#141428f5,#0f0f1df5);border:1px solid var(--border);border-radius:20px;padding:18px;box-shadow:0 12px 36px #0002}.hidden{display:none!important}.auth{max-width:450px;margin:10vh auto}.auth h2{margin:0 0 8px}.muted{color:var(--muted)}.field{display:grid;gap:7px;margin:13px 0}.field label{color:#c7c5e1;font-size:13px}.field input,.field select{width:100%;padding:13px 12px;border:1px solid #333350;background:#090918;color:var(--text);border-radius:11px;outline:none}.field input:focus,.field select:focus{border-color:var(--purple);box-shadow:0 0 0 3px #a855f722}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1}.auth-actions{display:flex;gap:9px;margin-top:18px}.auth-actions button{flex:1}.notice{padding:11px 13px;border-radius:12px;background:#211c36;border:1px solid #39305b;color:#d8caff;font-size:13px;line-height:1.5;margin:12px 0}.error{color:#ff9dbb}.success{color:var(--green)}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:15px}.topline .muted{font-size:13px;overflow-wrap:anywhere}.nav{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px}.nav button{white-space:nowrap;background:#17172a;color:#b9b8d6;border:1px solid var(--border);padding:10px 14px}.nav button.active{color:#090914;background:linear-gradient(100deg,var(--purple),var(--cyan));border-color:transparent}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.metric{min-height:120px}.metric .label{font-size:12px;color:var(--muted)}.metric .value{font-size:clamp(20px,4vw,29px);font-weight:800;margin:9px 0 3px;overflow-wrap:anywhere}.positive{color:var(--green)}.negative{color:var(--red)}.section-title{font-size:17px;margin:0 0 14px}.section{margin-top:14px}.transaction{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #26263c}.transaction:last-child{border-bottom:0}.dot{width:40px;height:40px;border-radius:13px;background:#25213c;display:grid;place-items:center;font-size:18px;flex-shrink:0}.txinfo{min-width:0;flex:1}.txinfo strong{display:block;overflow-wrap:anywhere}.txinfo small{color:var(--muted)}.amount{font-weight:800;white-space:nowrap}.smallbtn{padding:7px 10px;font-size:12px;border-radius:9px}.empty{text-align:center;color:var(--muted);padding:24px 10px}.barrow{display:grid;grid-template-columns:minmax(80px,120px) 1fr auto;gap:10px;align-items:center;margin:12px 0;font-size:13px}.bar{height:9px;border-radius:9px;background:#292943;overflow:hidden}.bar span{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--purple),var(--cyan))}.totalbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:8px 0 14px}.footer{text-align:center;color:#777693;font-size:11px;margin-top:22px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.formgrid .full{grid-column:1/-1}.monthrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.monthrow input{max-width:190px}.loading{color:var(--cyan);font-size:13px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.metric{min-height:100px}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.wrap{padding:15px 11px 30px}.card{padding:15px}.amount{font-size:13px}.transaction{gap:9px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand"><div class="logo">N</div><div><h1>NEON FINANCE</h1><small>TRACK • CONTROL • GROW</small></div></header>
+
+  <section id="authView" class="card auth">
+    <h2>Masuk ke akunmu</h2><p class="muted">Transaksi tersimpan di database online akunmu dan bisa disinkronkan di perangkat lain.</p>
+    <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="nama@email.com"></div>
+    <div class="field"><label for="password">Kata sandi</label><input id="password" type="password" autocomplete="current-password" placeholder="Minimal 6 karakter"></div>
+    <div class="auth-actions"><button id="loginBtn">Masuk</button><button id="registerBtn" class="secondary">Buat akun</button></div>
+    <div id="authMsg" class="notice">Buat akun dengan email dan kata sandi, lalu masuk di perangkat lain menggunakan akun yang sama.</div>
+  </section>
+
+  <main id="appView" class="hidden">
+    <div class="topline"><div><strong>Dashboard</strong><div class="muted" id="signedEmail"></div></div><button id="logoutBtn" class="secondary">Keluar</button></div>
+    <nav class="nav"><button class="active" data-page="home">Ringkasan</button><button data-page="transactions">Transaksi</button><button data-page="add">Tambah transaksi</button><button data-page="stats">Statistik</button></nav>
+
+    <section id="page-home">
+      <div class="grid">
+        <div class="card metric"><div class="label">SALDO BERSIH</div><div class="value" id="balance">Rp0</div><div class="muted">Total pemasukan − pengeluaran</div></div>
+        <div class="card metric"><div class="label">TOTAL PEMASUKAN</div><div class="value positive" id="income">Rp0</div><div class="muted">Bulan terpilih</div></div>
+        <div class="card metric"><div class="label">TOTAL PENGELUARAN</div><div class="value negative" id="expense">Rp0</div><div class="muted">Bulan terpilih</div></div>
+      </div>
+      <div class="card section"><h3 class="section-title">Transaksi terbaru</h3><div id="recentList" class="empty">Belum ada transaksi.</div></div>
+    </section>
+
+    <section id="page-transactions" class="hidden">
+      <div class="card"><h3 class="section-title">Riwayat transaksi</h3><div class="monthrow"><label for="monthFilter" class="muted">Bulan:</label><input id="monthFilter" type="month"><button class="secondary" id="allMonthsBtn">Semua</button></div><div id="historyList" class="empty">Belum ada transaksi.</div></div>
+    </section>
+
+    <section id="page-add" class="hidden">
+      <div class="card"><h3 class="section-title" id="formTitle">Tambah transaksi</h3>
+        <form id="txForm"><input id="txId" type="hidden">
+          <div class="formgrid">
+            <div class="field"><label for="txType">Jenis</label><select id="txType"><option value="expense">Pengeluaran (Lose)</option><option value="income">Pemasukan (Winrate)</option></select></div>
+            <div class="field"><label for="txAmount">Nominal (Rp)</label><input id="txAmount" type="number" min="1" step="1" required placeholder="Contoh: 50000"></div>
+            <div class="field"><label for="txName">Nama transaksi</label><input id="txName" maxlength="80" required placeholder="Contoh: Makan siang"></div>
+            <div class="field"><label for="txCategory">Kategori</label><select id="txCategory"></select></div>
+            <div class="field"><label for="txDate">Tanggal</label><input id="txDate" type="date" required></div>
+            <div class="field full"><label for="txNote">Catatan (opsional)</label><input id="txNote" maxlength="180" placeholder="Catatan tambahan"></div>
+          </div>
+          <div class="row"><button type="submit" id="saveTxBtn">Simpan transaksi</button><button type="button" id="cancelEditBtn" class="secondary hidden">Batal edit</button></div>
+          <div id="txMsg" class="notice hidden"></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="page-stats" class="hidden">
+      <div class="card"><h3 class="section-title">Statistik bulanan</h3><div class="monthrow"><label for="statsMonth" class="muted">Bulan:</label><input id="statsMonth" type="month"></div><div class="grid"><div><div class="muted">Pemasukan</div><h2 class="positive" id="statsIncome">Rp0</h2></div><div><div class="muted">Pengeluaran</div><h2 class="negative" id="statsExpense">Rp0</h2></div><div><div class="muted">Selisih</div><h2 id="statsNet">Rp0</h2></div></div><hr style="border-color:var(--border);margin:18px 0"><h3 class="section-title">Pengeluaran per kategori</h3><div id="categoryStats" class="empty">Belum ada data.</div></div>
+    </section>
+  </main>
+  <div class="footer">NEON FINANCE • Data pribadi per akun • Sinkronisasi melalui Firebase</div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
+import { getDatabase, ref, onValue, push, set, update, remove } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAJEPvM9IgC4aBS899hv5npF3iCHLutVqc",
+  authDomain: "neon-finance-b5366.firebaseapp.com",
+  databaseURL: "https://neon-finance-b5366-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "neon-finance-b5366",
+  storageBucket: "neon-finance-b5366.firebasestorage.app",
+  messagingSenderId: "986928829627",
+  appId: "1:986928829627:web:f7371bc0e3faa1d0c1c59e",
+  measurementId: "G-2T06VVEZBC"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase(app);
+const $ = id => document.getElementById(id);
+let currentUser = null, transactions = [], unsubscribe = null, selectedMonth = new Date().toISOString().slice(0,7), editing = false;
+const categories = {expense:["Lose","Lifestyle","Tagihan"],income:["Winrate","Modal"]};
+const rupiah = n => new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(Number(n)||0);
+const dateToday = () => {const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`};
+function message(el, text, type=""){el.textContent=text;el.classList.remove("hidden","error","success");if(type)el.classList.add(type)}
+function setAuthMessage(text,type=""){message($("authMsg"),text,type)}
+function filtered(){const m=$("monthFilter").value;return [...transactions].filter(t=>!m||String(t.date||"").startsWith(m)).sort((a,b)=>(b.date||"").localeCompare(a.date||"")||(b.createdAt||0)-(a.createdAt||0))}
+function byMonth(m){return transactions.filter(t=>String(t.date||"").startsWith(m))}
+function sums(list){return list.reduce((s,t)=>{if(t.type==="income")s.income+=Number(t.amount)||0;else s.expense+=Number(t.amount)||0;return s},{income:0,expense:0})}
+function transactionMarkup(t){const income=t.type==="income";return `<div class="transaction"><div class="dot">${income?"↗":"↘"}</div><div class="txinfo"><strong>${escapeHtml(t.name||"Transaksi")}</strong><small>${escapeHtml(t.date||"")} · ${escapeHtml(t.category||"")} ${t.note?"· "+escapeHtml(t.note):""}</small></div><div class="amount ${income?"positive":"negative"}">${income?"+":"−"}${rupiah(t.amount)}</div><button class="secondary smallbtn" data-edit="${t.id}">Edit</button><button class="danger smallbtn" data-delete="${t.id}">Hapus</button></div>`}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(){
+ const monthTx=byMonth(selectedMonth), s=sums(monthTx);
+ $("balance").textContent=rupiah(s.income-s.expense);$("income").textContent=rupiah(s.income);$("expense").textContent=rupiah(s.expense);
+ const recent=[...transactions].sort((a,b)=>(b.date||"").localeCompare(a.date||"")||(b.createdAt||0)-(a.createdAt||0)).slice(0,5);
+ $("recentList").innerHTML=recent.length?recent.map(transactionMarkup).join(""):'<div class="empty">Belum ada transaksi. Tekan “Tambah transaksi” untuk mulai.</div>';
+ const hist=filtered();$("historyList").innerHTML=hist.length?hist.map(transactionMarkup).join(""):'<div class="empty">Tidak ada transaksi pada pilihan ini.</div>';
+ const stat=sums(byMonth($("statsMonth").value||selectedMonth));$("statsIncome").textContent=rupiah(stat.income);$("statsExpense").textContent=rupiah(stat.expense);$("statsNet").textContent=rupiah(stat.income-stat.expense);$("statsNet").className=stat.income>=stat.expense?"positive":"negative";
+ const cats={};byMonth($("statsMonth").value||selectedMonth).filter(t=>t.type==="expense").forEach(t=>cats[t.category||"Lainnya"]=(cats[t.category||"Lainnya"]||0)+(Number(t.amount)||0));
+ const entries=Object.entries(cats).sort((a,b)=>b[1]-a[1]), max=Math.max(1,...entries.map(e=>e[1]));
+ $("categoryStats").innerHTML=entries.length?entries.map(([name,val])=>`<div class="barrow"><span>${escapeHtml(name)}</span><div class="bar"><span style="width:${Math.max(2,val/max*100)}%"></span></div><strong>${rupiah(val)}</strong></div>`).join(""):'<div class="empty">Belum ada data pengeluaran.</div>';
+}
+function setCategories(type, chosen){$("txCategory").innerHTML=categories[type].map(c=>`<option ${c===chosen?"selected":""}>${c}</option>`).join("")}
+function showPage(page){document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));["home","transactions","add","stats"].forEach(p=>$("page-"+p).classList.toggle("hidden",p!==page));if(page==="add"&&!editing)resetForm()}
+function resetForm(){editing=false;$("txForm").reset();$("txId").value="";$("txDate").value=dateToday();$("txType").value="expense";setCategories("expense");$("formTitle").textContent="Tambah transaksi";$("saveTxBtn").textContent="Simpan transaksi";$("cancelEditBtn").classList.add("hidden");$("txMsg").classList.add("hidden")}
+function startEdit(id){const t=transactions.find(x=>x.id===id);if(!t)return;editing=true;$("txId").value=t.id;$("txType").value=t.type;setCategories(t.type,t.category);$("txAmount").value=t.amount;$("txName").value=t.name;$("txDate").value=t.date;$("txNote").value=t.note||"";$("formTitle").textContent="Edit transaksi";$("saveTxBtn").textContent="Simpan perubahan";$("cancelEditBtn").classList.remove("hidden");$("txMsg").classList.add("hidden");showPage("add")}
+async function txAction(action,id){if(!currentUser)return;const target=ref(db,`users/${currentUser.uid}/transactions/${id}`);try{if(action==="delete"){if(!confirm("Hapus transaksi ini?"))return;await remove(target)}else startEdit(id)}catch(e){alert("Gagal memproses transaksi: "+friendlyError(e))}}
+function friendlyError(e){const code=e?.code||"";if(code.includes("permission-denied"))return "Akses database ditolak. Periksa Rules Firebase.";if(code.includes("email-already-in-use"))return "Email ini sudah terdaftar. Coba masuk.";if(code.includes("invalid-credential")||code.includes("wrong-password")||code.includes("user-not-found"))return "Email atau kata sandi salah.";if(code.includes("weak-password"))return "Kata sandi minimal 6 karakter.";if(code.includes("invalid-email"))return "Format email tidak valid.";if(code.includes("network-request-failed"))return "Koneksi internet bermasalah.";return e?.message||"Terjadi kesalahan."}
+$("loginBtn").addEventListener("click",async()=>{const email=$("email").value.trim(),password=$("password").value;if(!email||!password)return setAuthMessage("Isi email dan kata sandi dulu.","error");$("loginBtn").disabled=true;try{await signInWithEmailAndPassword(auth,email,password);setAuthMessage("Berhasil masuk.","success")}catch(e){setAuthMessage(friendlyError(e),"error")}finally{$("loginBtn").disabled=false}});
+$("registerBtn").addEventListener("click",async()=>{const email=$("email").value.trim(),password=$("password").value;if(!email||!password)return setAuthMessage("Isi email dan kata sandi untuk membuat akun.","error");if(password.length<6)return setAuthMessage("Kata sandi minimal 6 karakter.","error");$("registerBtn").disabled=true;try{await createUserWithEmailAndPassword(auth,email,password);setAuthMessage("Akun berhasil dibuat dan sudah masuk.","success")}catch(e){setAuthMessage(friendlyError(e),"error")}finally{$("registerBtn").disabled=false}});
+$("logoutBtn").addEventListener("click",()=>signOut(auth));
+onAuthStateChanged(auth,user=>{currentUser=user;$("authView").classList.toggle("hidden",!!user);$("appView").classList.toggle("hidden",!user);if(unsubscribe){unsubscribe();unsubscribe=null}transactions=[];if(user){$("signedEmail").textContent=user.email||"Akun terhubung";unsubscribe=onValue(ref(db,`users/${user.uid}/transactions`),snap=>{const val=snap.val()||{};transactions=Object.entries(val).map(([id,t])=>({...t,id}));render()},err=>{console.error(err);$("recentList").innerHTML=`<div class="notice error">${escapeHtml(friendlyError(err))}<br>Periksa Rules Realtime Database.</div>`});}else{render()}});
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+$("txType").addEventListener("change",()=>setCategories($("txType").value));
+$("txForm").addEventListener("submit",async e=>{e.preventDefault();if(!currentUser)return;const amount=Number($("txAmount").value);if(!Number.isFinite(amount)||amount<=0)return message($("txMsg"),"Nominal harus lebih besar dari 0.","error");const data={type:$("txType").value,amount,name:$("txName").value.trim(),category:$("txCategory").value,date:$("txDate").value,note:$("txNote").value.trim(),updatedAt:Date.now()};if(!data.name||!data.date)return message($("txMsg"),"Isi nama transaksi dan tanggal.","error");$("saveTxBtn").disabled=true;try{if(editing){data.createdAt=transactions.find(t=>t.id===$("txId").value)?.createdAt||Date.now();await update(ref(db,`users/${currentUser.uid}/transactions/${$("txId").value}`),data)}else{data.createdAt=Date.now();await set(push(ref(db,`users/${currentUser.uid}/transactions`)),data)}resetForm();showPage("transactions")}catch(err){message($("txMsg"),friendlyError(err),"error")}finally{$("saveTxBtn").disabled=false}});
+$("cancelEditBtn").addEventListener("click",()=>{resetForm();showPage("transactions")});
+document.addEventListener("click",e=>{const edit=e.target.closest("[data-edit]");const del=e.target.closest("[data-delete]");if(edit)txAction("edit",edit.dataset.edit);if(del)txAction("delete",del.dataset.delete)});
+$("monthFilter").value=selectedMonth;$("statsMonth").value=selectedMonth;$("txDate").value=dateToday();setCategories("expense");
+$("monthFilter").addEventListener("change",render);$("statsMonth").addEventListener("change",render);$("allMonthsBtn").addEventListener("click",()=>{$("monthFilter").value="";render()});
+</script>
+</body>
+</html>
